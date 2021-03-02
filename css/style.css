@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #2B5E70;
+    position: relative;
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size: 925px;
+    background-position: right bottom;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 50px;
+    background-color: #245060;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+.menu{
+    display: flex;
+    
+}
+.menu li a{
+    padding: 14px 15px;
+    color: #F07707;
+}
+.menu li a:hover{
+    background-color: #FFFDFD;
+    transition: all ease 0.7;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.name{
+    width: 500px;
+    position: absolute;
+    left: 23%;
+    top: 55%;
+    transform: translate(-20%,-50%);
+}
+
+
+.details{
+    color: #FFFDFD;
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding: 0 10px 45px 0;
+    font-weight: 400;
+}
+
+.author{
+    color: #F07707;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.name h1{
+    font-size: 35px;
+    color: #F07707;
+
+}
+.name p:nth-child(2){
+    font-size: 25px;
+    color: #FFFDFD;
+    margin: 0px;
+    letter-spacing: 2px;
+}
+
+.resume__button{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFDFD;
+    background-color: #c05e02;
+    font-weight: 600;
+    
+}
+
+.resume__button:hover{
+    background-color: #FFFDFD;
+    border-radius: 4px;
+    color: #F07707;
+    transition: all ease 0.5s;
+}    
+.social{
+    position:absolute;
+    left: 70px;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a{
+    margin: 6px 14px 20px;
+}
+
+.social i{
+    color: rgba(250, 135, 4, 0.562);
+    font-size: 20px;
+}
+
+.social a:hover i{
+    color: #FFFDFD;
+    transition: all ease 0.5s;
+}
+
+.mouse{
+    align-self: end;
+    width: 25px;
+    height: 40px;
+    margin-bottom: 4em;
+    position: absolute;
+    bottom: 0px;
+    left: 47%;
+    background: #f17807 linear-gradient(transparent 0%, transparent 50%, #FFFDFD 50%, #FFFDFD 100%);
+    background-size: 100% 200%;
+    border-radius: 100px;
+    animation: colorSlide 7s linear infinite, nudgeMouse 7s ease-out infinite;
+}
+
+.mouse:before,
+.mouse:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.mouse:before{
+    width: 20px;
+    height: 35px;
+    background-color: #FFFDFD;
+    border-radius: 100px;
+}
+
+.mouse:after{
+    background-color: #f17807;
+    width: 5px;
+    height: 5px;
+    border-radius: 100px;
+    animation: 2s scroll cubic-bezier(0.65, -0.55, 0.25, 1.5) infinite;
+
+}
+
+/*Animation*/
+@keyframes colorSlide{
+    0%{
+        background-position: 0% 100%;
+    }
+    20%{
+        background-position: 0% 0%;
+    }
+    21%{
+        background-color: #f17807;
+    }
+    29.99%{
+        background-color: #FFFDFD;
+        background-position: 0% 0%;
+    }
+    30%{
+        background-color: #FFFDFD;
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 0% 0%;
+    }
+    51%{
+        background-color: #f17807;
+    }
+    59%{
+        background-color: #FFFDFD;
+        background-position: 0% 0%;
+    }
+    60%{
+        background-color: #f17807;
+        background-position: 0% 100%;
+    }
+    80%{
+        background-position: 0% 0%;
+    }
+    81%{
+        background-color: #f17807;
+    }
+    90%, 100%{
+        background-color: #FFFDFD;
+    }
+}
+
+
+@keyframes nudgeMouse{
+    0%{
+        transition: translateY(0);
+    }
+    20%{
+        transition: translateY(8px);
+    }
+    30%{
+        transition: translateY(0);
+    }
+    50%{
+        transition: translateY(8px);
+    }
+    60%{
+        transition: translateY(0);
+    }
+    80%{
+        transition: translateY(8px);
+    }
+    90%{
+        transition: translateY(0);
+    }
+    
+
+}
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.5);
+    }
+}
+
+/*Portfolio*/
+
+.portfolio{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 3% 20px 3%;
+    background-image: url('../images/bg2.png');
+    background-repeat: no-repeat;
+    background-size: 1357px;
+    background-position: top right;
+}
+
+.portfolio__heading{
+    font-size: 1.7rem;
+    text-align: center;
+    color: #f17807;
+    font-weight: 700;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+}
+
+.category__head{
+    margin: 10px 0;
+}
+.category__head ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.category__title{
+    flex: 0 0 calc(12.6667% - 24px);
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    color: #245060;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.5s;
+}
+
+.category__title:hover{
+    border-radius: 4px;
+    color: #FFFDFD;
+    background: #F07707;
+}
+
+.category__head i{
+    padding: 0 8px;
+}
+
+/*Post container*/
+.projects__collection{
+    margin: 30px 0;
+}
+.post__mainContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+.all__postImage img{
+    width: 100%;
+    position: relative;
+}
+
+.post__mainContainer > div{
+    box-shadow: 0px 8px 22px -12px rgba(0,0,0,0.64);
+}
+
+.category__name{
+    position: absolute;
+    left: 43px;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: #FFFDFD;
+    padding: 13px 16px;
+    border-radius: 2px;
+    font-weight: 600;
+}
