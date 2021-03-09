@@ -271,7 +271,7 @@ a{
     padding: 40px 3% 20px 3%;
     background: url('../images/bg2.svg');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center top;
 }
 
 .portfolio__heading{
@@ -279,7 +279,7 @@ a{
     text-align: center;
     color: #f17807;
     font-weight: 700;
-    padding: 10px 20px;
+    padding: 21px 20px;
     letter-spacing: 2px;
 }
 
@@ -337,6 +337,9 @@ a{
     border-radius: 8px;
 }
 
+.filter__container{
+    height: 150vh;
+}
 .post__mainContainer > div{
     box-shadow: 0px 8px 22px -12px rgba(0,0,0,0.64);
 }
@@ -423,4 +426,40 @@ a{
     .category__contentTop span{
         padding:10px 0 10px 30px;
     }
+}
+
+/*Skills*/
+.skills{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    background: #2B5E70;
+}
+
+.skills__head h1{
+    font-size: 1.7rem;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+}
+
+.skills__head{
+    text-align: center;
+    margin: 20px 0px; 
+}
+
+
+#canvas1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    
 }
